@@ -1,0 +1,74 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+
+# Backend test images (too large for GitHub)
+backend/assets/imgs/*.jpg
+backend/assets/imgs/*.png
+backend/assets/imgs/*.jpeg
+
+# Backend large data files (too large for GitHub)
+backend/assets/plates.dat
+
+# Documentation - WIP (Work In Progress)
+# Ignorar todos los README mientras se mejoran
+**/README.md
+**/SETUP_ENV.md
+**/SUPABASE_README.md
+**/CHATBOT_README.md
+**/CONVERSATIONS_README.md
+**/OCR_README.md
+**/TROUBLESHOOTING_CONVERSATIONS.md
+**/CODE_REVIEW_SENIOR.md
+**/CHECKLIST_MEJORAS.md
+**/RESUMEN_EJECUTIVO.md
+**/TESTING_STRATEGY.md
+**/LOGO_IMPLEMENTATION.md
+**/CONVERSACIONES_README.md
+
+# Keep only essential documentation (descomenta si quieres mantener alguno)
+# !README.md
+# !package.json
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Vitest
+vitest.config.ts.timestamp*
