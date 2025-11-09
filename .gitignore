@@ -49,6 +49,7 @@ backend/assets/plates.dat
 # Documentation - WIP (Work In Progress)
 # Ignorar todos los README mientras se mejoran
 **/README.md
+!backend/assets/README.md
 **/SETUP_ENV.md
 **/SUPABASE_README.md
 **/CHATBOT_README.md
