@@ -42,6 +42,10 @@ env/
 backend/assets/imgs/*.jpg
 backend/assets/imgs/*.png
 backend/assets/imgs/*.jpeg
+# Pero permitir las imágenes de muestra
+!backend/assets/imgs_sample/*.jpg
+!backend/assets/imgs_sample/*.png
+!backend/assets/imgs_sample/*.jpeg
 
 # Backend large data files (too large for GitHub)
 backend/assets/plates.dat

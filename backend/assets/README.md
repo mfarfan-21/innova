@@ -8,15 +8,21 @@
 - **Listo para Render deployment**
 - Suficiente para demo y entrevista técnica
 
+### ✅ `imgs_sample/` (1.5MB - 10 imágenes incluidas en GitHub)
+- **10 imágenes reales** de matrículas
+- Las más pequeñas del conjunto completo
+- **Listas para visualización en Render**
+- Suficiente para demo de OCR con imágenes
+
 ### ❌ `plates.dat` (115MB - Excluido de GitHub)
 - Base de datos completa de matrículas españolas
 - ~15,000 matrículas
 - Solo disponible en desarrollo local
 
 ### ❌ `imgs/*.jpg` (~120MB - Excluidos de GitHub)
-- Imágenes de prueba de matrículas
+- ~300 imágenes completas de prueba
 - Solo para desarrollo local
-- No necesarias en producción
+- Las 20 más pequeñas están en `imgs_sample/`
 
 ## Funcionamiento Automático
 
