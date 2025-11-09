@@ -1,13 +1,32 @@
 # Assets Directory
 
-## Excluded Files
+## Archivos Disponibles
 
-Los siguientes archivos fueron excluidos del repositorio de GitHub debido a su tamaño:
+### ✅ `plates_sample.dat` (28KB - Incluido en GitHub)
+- **50 matrículas reales** de prueba
+- Formato idéntico al archivo completo
+- **Listo para Render deployment**
+- Suficiente para demo y entrevista técnica
 
-- **`imgs/*.jpg`** - Imágenes de prueba de matrículas (~120MB total)
-- **`plates.dat`** - Base de datos de matrículas españolas (115MB)
+### ❌ `plates.dat` (115MB - Excluido de GitHub)
+- Base de datos completa de matrículas españolas
+- ~15,000 matrículas
+- Solo disponible en desarrollo local
 
-Estos archivos están disponibles localmente para desarrollo y testing.
+### ❌ `imgs/*.jpg` (~120MB - Excluidos de GitHub)
+- Imágenes de prueba de matrículas
+- Solo para desarrollo local
+- No necesarias en producción
+
+## Funcionamiento Automático
+
+El código **detecta automáticamente** qué archivo usar:
+
+1. Si existe `plates_sample.dat` → Lo usa (modo demo/producción)
+2. Si existe `plates.dat` → Lo usa (modo desarrollo completo)
+3. Si no existe ninguno → Error
+
+**En Render:** Usará automáticamente `plates_sample.dat` ✅
 
 ## Configuración para Producción
 

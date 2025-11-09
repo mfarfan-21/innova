@@ -10,15 +10,33 @@ from domain.repositories.plate_repository import PlateRepository
 
 
 class PlatesDatRepository(PlateRepository):
-    """Repositorio que lee matrículas desde plates.dat"""
+    """Repositorio que lee matrículas desde plates.dat (o plates_sample.dat para demo)"""
 
     def __init__(self, plates_dat_path: str):
         self.plates_dat_path = Path(plates_dat_path)
         
-        if not self.plates_dat_path.exists():
-            raise FileNotFoundError(f"No se encontró el archivo: {plates_dat_path}")
+        # Intentar primero con sample (para Render/producción sin archivos grandes)
+        sample_path = self.plates_dat_path.parent / "plates_sample.dat"
+        
+        if sample_path.exists():
+            print(f"✅ Usando plates_sample.dat (modo demo con 50 matrículas)")
+            self.plates_dat_path = sample_path
+        elif not self.plates_dat_path.exists():
+            raise FileNotFoundError(
+                f"No se encontró ni plates.dat ni plates_sample.dat en: {self.plates_dat_path.parent}"
+            )
+        else:
+            print(f"✅ Usando plates.dat completo ({self._count_lines()} matrículas)")
         
         self._plates_cache: Optional[Dict[str, Plate]] = None
+    
+    def _count_lines(self) -> int:
+        """Cuenta las líneas del archivo para información"""
+        try:
+            with open(self.plates_dat_path, 'r') as f:
+                return sum(1 for _ in f)
+        except Exception:
+            return 0
 
     def _load_plates_cache(self) -> Dict[str, Plate]:
         """Carga todas las matrículas en memoria (cache)"""

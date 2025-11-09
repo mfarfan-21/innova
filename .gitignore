@@ -45,6 +45,8 @@ backend/assets/imgs/*.jpeg
 
 # Backend large data files (too large for GitHub)
 backend/assets/plates.dat
+# Pero permitir el sample pequeño para demo
+!backend/assets/plates_sample.dat
 
 # Documentation - WIP (Work In Progress)
 # Ignorar todos los README mientras se mejoran
